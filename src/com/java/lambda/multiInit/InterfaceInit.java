@@ -1,4 +1,4 @@
-package com.java.multiInit;
+package com.java.lambda.multiInit;
 
 @FunctionalInterface
 
