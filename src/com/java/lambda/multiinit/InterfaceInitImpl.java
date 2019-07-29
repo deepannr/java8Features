@@ -1,4 +1,4 @@
-package com.java.lambda.multiInit;
+package com.java.lambda.multiinit;
 
 public class InterfaceInitImpl implements InterfaceInit {
 
