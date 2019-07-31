@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.java.lambda.exercise1.Exercise1MainJava7.Condition;
+
 
 public class Exercise1MainJava8 {
 
@@ -33,10 +35,4 @@ public class Exercise1MainJava8 {
 	private static void printAllList(List<Person> personList) {
 		personList.forEach(person -> System.out.println(person));
 	}
-	
-	@FunctionalInterface
-	interface Condition {
-		boolean testCondition(Person person);
-	}
-
 }
