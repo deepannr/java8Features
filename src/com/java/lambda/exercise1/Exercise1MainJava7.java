@@ -12,12 +12,10 @@ public class Exercise1MainJava7 {
 				new Person("Polo", "Mercedes", 37), new Person("ThunderBird", "Enfield", 70));
 
 		Collections.sort(personList, new Comparator<Person>() {
-
 			@Override
 			public int compare(Person o1, Person o2) {
 				return o1.getLastName().compareTo(o2.getLastName());
 			}
-
 		});
 
 		System.out.println("------Prints All List------");
