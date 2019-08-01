@@ -1,4 +1,4 @@
-package com.java.lambda.prebuilt;
+package com.java.lambda.singleclass;
 
 import java.util.Arrays;
 import java.util.Collections;
