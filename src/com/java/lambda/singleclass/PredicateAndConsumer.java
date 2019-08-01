@@ -36,9 +36,14 @@ public class PredicateAndConsumer {
 		System.out.println("\n\n----Matching List For First Name----");
 		printList(personList, person -> person.getFirstName().startsWith("T"),
 				person -> System.out.println(person.getFirstName()));
+		
 	}
 
 	private static void printList(List<Person> personList, Predicate<Person> predicate, Consumer<Person> consumer) {
+		
+		/**
+		 * forEach takes an argument of Consumer which has method accept takes argument of person.
+		 */
 		personList.forEach(person -> {
 			if (predicate.test(person)) {
 				consumer.accept(person);
