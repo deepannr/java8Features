@@ -20,8 +20,8 @@ public class PredicateAndConsumer {
 
 	public static void main(String[] args) {
 
-		List<Person> personList = Arrays.asList(new Person("Ed", "Macke", 65), new Person("Deepan", "Reguraman", 39),
-				new Person("Polo", "Mercedes", 37), new Person("ThunderBird", "Enfield", 70));
+		List<Person> personList = Arrays.asList(new Person("Hero", "Maestro", 65), new Person("Honda", "Unicorn", 39),
+				new Person("Benz", "Mercedes", 37), new Person("ThunderBird", "Enfield", 70));
 
 		System.out.println("----Unorder List----");
 		printList(personList, person -> true, person -> System.out.println(person));
