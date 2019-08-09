@@ -2,7 +2,7 @@ Basic Lambda, Streams are from
 https://www.youtube.com/watch?v=gpIUfj3KaOc&list=PLqq-6Pq4lTTa9YGfyhyW2CqdtW9RtY-I3&index=1
 
 On Streams
-https://www.youtube.com/watch?v=rVfRDLIw_Zw
+https://www.youtube.com/watch?v=rVfRDLIw_Zw --> 40:00
 
 API of Java 8. Check for Consumer, Predicates etc.
 https://docs.oracle.com/javase/8/docs/api/index.html
