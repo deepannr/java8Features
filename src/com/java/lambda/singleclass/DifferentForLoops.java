@@ -43,9 +43,12 @@ public class DifferentForLoops {
 		System.out.println("\n\n----Static Reference method ----");
 		personList.forEach(DifferentForLoops::printOnlyCondition);
 		
+		/**
+		 * Here in Predicate test method all conditions will be returned as true
+		 */
 		System.out.println("\n\n----Instance Reference method ----");
 		printList(personList, person -> true, System.out::println);
-		
+
 		/**
 		 * In Predicate test method process the condition which returns true.
 		 */
