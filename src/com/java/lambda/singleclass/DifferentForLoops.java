@@ -63,6 +63,10 @@ public class DifferentForLoops {
 	
 
 	private static void printList(List<Person> personList, Predicate<Person> predicate, Consumer<Person> consumer) {
+		/**
+		 * Predicate test method test the passed condition and in if loop if(true)
+		 * Consumer accept method with process the passed condition and here asked to print to console
+		 */
 		personList.forEach(person -> {
 			if (predicate.test(person)) {
 				consumer.accept(person);
