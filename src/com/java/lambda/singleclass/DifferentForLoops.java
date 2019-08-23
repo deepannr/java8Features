@@ -45,6 +45,12 @@ public class DifferentForLoops {
 		
 		System.out.println("\n\n----Instance Reference method ----");
 		printList(personList, person -> true, System.out::println);
+		
+		/**
+		 * In Predicate test method process the condition which returns true.
+		 */
+		System.out.println("\n\n----For Certain Matching Condition ----");
+		printList(personList, person -> person.getAge() > 37, System.out::println);
 	}
 	
 	
