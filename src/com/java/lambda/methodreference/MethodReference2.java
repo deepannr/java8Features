@@ -21,6 +21,13 @@ public class MethodReference2 {
 		 * ie it calls one argument instance and prints that
 		 */
 		printList(personList, person -> true, System.out::println);
+		
+		
+		/**
+		 * Here in Predicate it test a condition if the age is > 39
+		 */
+		System.out.println("----For a matching Condition----");
+		printList(personList, person -> person.getAge() > 39, System.out::println);
 	}
 
 	private static void printList(List<Person> personList, Predicate<Person> predicate, Consumer<Person> consumer) {
