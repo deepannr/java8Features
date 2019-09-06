@@ -20,10 +20,12 @@ public class StreamExample1 {
 				new Person("Hero", "Master", Gender.MALE, 2), new Person("Benz", "Merry", Gender.MALE, 7),
 				new Person("ThunderBird", "Enfield", Gender.MALE, 70));
 
+		System.out.println("----First Name Starts with H");
 		personList.stream().filter(p -> p.getFirstName().startsWith("H"))
 				.forEach(p -> System.out.println(p.getFirstName()));
 
-		System.out.println(personList.parallelStream().filter(p -> p.getLastName().startsWith("M")).count());
+		System.out.println("----Persons Count on Last Name Starts with M: "
+				+ personList.parallelStream().filter(p -> p.getLastName().startsWith("M")).count());
 
 		List<String> nameList = personList.stream().filter(person -> person.getAge() > 39)
 				.map(person -> person.getFirstName()).map(fName -> fName.toUpperCase()).collect(toList());
@@ -79,15 +81,15 @@ public class StreamExample1 {
 
 		System.out.println("Matching Name : "
 				+ personList.stream().filter(person -> person.getFirstName().length() == 4).findFirst());
-		
+
 		System.out.println("Matching Name Another Way : "
 				+ personList.stream().filter(StreamExample1::isFourLettersFirstName).findFirst());
-		
+
 		System.out.print("Print 10 Even Numbers : ");
 		Stream.iterate(0, e -> e + 1).filter(e -> e % 2 == 0).limit(10).forEach(System.out::println);
-		
+
 		System.out.print("Print Even Numbers Starting from 4 (seed first param in iterate) : ");
-		Stream.iterate(4, e -> e+1).filter(e -> e%2 ==0).limit(10).forEach(System.out::println);
+		Stream.iterate(4, e -> e + 1).filter(e -> e % 2 == 0).limit(10).forEach(System.out::println);
 	}
 
 	private static boolean isFourLettersFirstName(Person person) {

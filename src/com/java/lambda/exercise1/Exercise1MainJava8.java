@@ -3,6 +3,8 @@ package com.java.lambda.exercise1;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 import com.java.lambda.exercise1.Exercise1MainJava7.Condition;
 
@@ -21,6 +23,9 @@ public class Exercise1MainJava8 {
 
 		System.out.println("\n\n----Matching List----");
 		printMatchingList(personList, person -> person.getLastName().startsWith("M"));
+		
+		System.out.println("\n\n----Another Way of Printing Matching List");
+		printMatchingList(personList, person -> person.getLastName().startsWith("M"), System.out::println);
 	}
 
 	private static void printMatchingList(List<Person> personList, Condition condition) {
@@ -32,6 +37,17 @@ public class Exercise1MainJava8 {
 	}
 
 	private static void printAllList(List<Person> personList) {
+		System.out.println("----One Way----");
 		personList.forEach(person -> System.out.println(person));
+		System.out.println("----Another Way----");
+		personList.forEach(System.out::println);
+	}
+	
+	private static void printMatchingList(List<Person> personList, Predicate<Person> predicate, Consumer<Person> consumer) {
+		personList.forEach(person -> {
+			if (predicate.test(person)) {
+				consumer.accept(person);
+			}
+		});
 	}
 }

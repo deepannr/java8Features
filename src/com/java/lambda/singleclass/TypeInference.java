@@ -10,6 +10,7 @@ public class TypeInference {
 		System.out.println(inference.stringLength("ABC", "DEF"));
 	}
 
+	@FunctionalInterface
 	interface TypeInferenceInterface {
 		int stringLength(String s1, String s2);
 	}

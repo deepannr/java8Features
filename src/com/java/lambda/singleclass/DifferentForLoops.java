@@ -40,6 +40,11 @@ public class DifferentForLoops {
 		 */
 		personList.forEach(System.out::println);
 		
+		
+		/**
+		 * This is static reference. Instance of the class can't be used and also non
+		 * static methods can't be called
+		 */
 		System.out.println("\n\n----Static Reference method ----");
 		personList.forEach(DifferentForLoops::printOnlyCondition);
 		
