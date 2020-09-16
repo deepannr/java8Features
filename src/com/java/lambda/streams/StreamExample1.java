@@ -46,6 +46,8 @@ public class StreamExample1 {
 		 * Even though Age is integer, need to map that stream to integer/
 		 */
 		System.out.println("Total Age: " + personList.stream().mapToInt(Person::getAge).sum());
+		
+		System.out.println("Print All First Names: " + personList.stream().map(Person::getFirstName).collect(toList()));
 
 		System.out.println("Max Age: " + personList.stream().filter(person -> person.getGender() == Gender.MALE)
 				.max((person1, person2) -> person1.getAge().compareTo(person2.getAge()))
